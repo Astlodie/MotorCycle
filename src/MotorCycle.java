@@ -1,12 +1,15 @@
-public class MotorCycle {
-	private static String String;
+class MotorCycle {
 	String color;
 	int speed;
-	int gear;		 
-	public MotorCycle(String c, int s, int g) {
+	int gear;
+	String pilotName;
+	int pilotAge;
+	public MotorCycle(String c, int s, int g, String n, int a) {
 		this.color=c;
 		this.speed =s;
 		this.gear = g;
+		this.pilotName = n;
+		this.pilotAge = a;
 	}
 	public MotorCycle() {
 		// TODO Auto-generated constructor stub
@@ -19,34 +22,21 @@ public class MotorCycle {
 		System.out.println("The speed is:" +speed);}
 	public String getInfo() {
 		return ("The color is: "+color+" The speed is:"+speed+" The gear is:"+gear);
+	}		
 	}
-	public static void main(String[] args) {
-		MotorCycle obj1 = new  MotorCycle(String c, int s, int g);
-		MotorCycle obj2 = new  MotorCycle(String c, int s, int g);	
-		System.out.println(obj1.color);
-		System.out.println(obj1.speed);
-		System.out.println(obj1.gear);
-		System.out.println(obj2.color);
-		System.out.println(obj2.speed);
-		System.out.println(obj2.gear);	
-	}
-}
 class PilotClass{
-	static String pilotName;
-	static int pilotAge1;
-	MotorCycle pilotAge;					//Creating HAS-A relationship with MotorCycle class
-	PilotClass(String name, int age){
-		PilotClass.pilotName=name;
-		this.pilotAge1=age; }
-public static void main(String[] args) {
-	PilotClass obj3 = new  PilotClass(pilotName, pilotAge1);
-	PilotClass obj4 = new  PilotClass(pilotName, pilotAge1);	
+	String pilotName;
+	int pilotAge;
+		MotorCycle pilotAge;					//Creating HAS-A relationship with MotorCycle class
+	PilotClass(String n, int a){
+		this.pilotName=n;
+		this.pilotAge=a; }
+void main(String[] args) {
+	PilotClass obj3 = new PilotClass(pilotName, pilotAge);
 	System.out.println(obj3.pilotName);
-	System.out.println(obj3.pilotAge1);
-	System.out.println(obj4.pilotName);
-	System.out.println(obj4.pilotAge1);}
+	System.out.println(obj3.pilotAge);}
 	public String getInfo() {
-		return ("The pilot name is: "+pilotName+" The pilot age is:"+pilotAge1);
+		return ("The pilot name is: "+pilotName+" The pilot age is:"+pilotAge);
 	}
 }
 class MountainMotorCycle extends MotorCycle{
