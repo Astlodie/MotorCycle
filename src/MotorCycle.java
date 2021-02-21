@@ -26,8 +26,8 @@ class MotorCycle {
 	}
 class PilotClass{
 	String pilotName;
-	int pilotAge;
-		MotorCycle pilotAge;					//Creating HAS-A relationship with MotorCycle class
+	int pilotAge;{
+		MotorCycle pilotAge;}					//Creating HAS-A relationship with MotorCycle class
 	PilotClass(String n, int a){
 		this.pilotName=n;
 		this.pilotAge=a; }
